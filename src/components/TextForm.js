@@ -31,6 +31,7 @@ export default function TextForm(props) {
     const text = document.getElementById("MyBox");
     text.select();
     navigator.clipboard.writeText(text.value);
+    document.getSelection().removeAllRanges();
     // setText("You have clicked on hendleClearClick")
     props.showAlert("Copy To Keybord", "success")
   }
@@ -68,7 +69,7 @@ export default function TextForm(props) {
         <p>{text.split(" ").filter((element) => { return element.length !== 0 }).length} words and {text.length} characters</p>
         <p>{0.008 * text.split(" ").filter((element) => { return element.length !== 0 }).length} Minutes Read</p>
         <h2>Preview</h2>
-        <p>{text.length > 0 ? text : "Enter Something in the textbox above to preview it here"}</p>
+        <p>{text.length > 0 ? text : "Nothing to Preview"}</p>
       </div>
     </>
   )
