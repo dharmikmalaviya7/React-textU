@@ -52,6 +52,7 @@ export default function TextForm(props) {
   // setText("Dharmik");
   return (
     <>
+    <div className="div"></div>
       <div className='container' style={{ color: props.mode === "dark" ? "white" : "black" }}>
         <h1 className='mb-4'>{props.heading}</h1>
         <div className="mb-3">
